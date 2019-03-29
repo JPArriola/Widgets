@@ -6,7 +6,20 @@ import Autocomplete from './frontend/autocomplete';
 
 function Root(){
 
-  const names=
+  const names = [
+    "Adi",
+    "Sue",
+    "Micah",
+    "Miso",
+    "Kartik",
+    "Choi",
+    "Andy",
+    "Carly",
+    "Julian",
+    "Josh",
+    "Joanna",
+    "Nikki"
+  ];
 
   const tabs = [
     {title: "one", content: "first content"},
@@ -18,7 +31,7 @@ function Root(){
     <div>
       <Clock />
       <Tabs tabs={tabs}/>
-      <Autocomplete />
+      <Autocomplete names={names}/>
     </div>
   )
 }

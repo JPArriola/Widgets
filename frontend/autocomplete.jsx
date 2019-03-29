@@ -10,9 +10,13 @@ class Autocomplete extends React.Component{
   }
 
   render(){
+    const names = this.props.names.map((name, index) => (
+      <li key={index}>{name}</li>
+    ));
     return(
       <div>
         <h1>Autocomplete</h1>
+        {names}
       </div>
     )
   }
