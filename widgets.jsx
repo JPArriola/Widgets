@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './frontend/clock';
 import Tabs from './frontend/tabs';
+import Weather from './frontend/weather';
 import Autocomplete from './frontend/autocomplete';
 
 function Root(){
@@ -31,6 +32,7 @@ function Root(){
     <div>
       <Clock />
       <Tabs tabs={tabs}/>
+      <Weather />
       <Autocomplete names={names}/>
     </div>
   )

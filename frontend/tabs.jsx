@@ -19,12 +19,7 @@ class Tabs extends React.Component{
   }
 
   render(){
-    console.log(this.props);
-
     const pane = this.props.tabs[this.state.currentTab];
-
-    console.log(pane)
-
     return(
       <div>
         <h1>Tabs</h1>
