@@ -17,8 +17,6 @@ class Weather extends React.Component{
   getWeather(location) {
     const {latitude, longitude} = location.coords;
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=3ec2e0139d7d3a901be8084c3360005e`;
-    console.log(latitude, longitude);
-    console.log("hello");
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = () => {
       if (xmlhttp.status === 200 && xmlhttp.readyState === XMLHttpRequest.DONE) {
@@ -32,7 +30,7 @@ class Weather extends React.Component{
   }
 
   render() {
-    let content = <div></div>;
+    let content = <div>loading weather...</div>;
     console.log(this.state.weather);
 
     if (this.state.weather) {
@@ -42,8 +40,6 @@ class Weather extends React.Component{
         <p>{weather.name}</p>
         <p>{temp.toFixed(1)} degrees</p>
       </div>;
-    } else {
-      content = <div className='loading'>loading weather...</div>;
     }
     return (
       <div>
